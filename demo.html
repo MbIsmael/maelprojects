@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecole Malaika Saint Dominic Savio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E63946; /* Vibrant red */
+            --secondary: #457B9D; /* Deep blue */
+            --accent: #F4A261; /* Warm orange */
+            --light: #F1FAEE; /* Cream white */
+            --dark: #1D3557; /* Navy blue */
+            --gold: #FFD700;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+        }
+        
+        /* Modern Top Banner */
+        .top-banner {
+            background: linear-gradient(135deg, var(--light) 0%, white 100%);
+            padding: 1.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-bottom: 3px solid var(--accent);
+        }
+        
+        /* Decorative elements */
+        .top-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+        
+        .top-banner::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background-color: var(--accent);
+            opacity: 0.1;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .school-logo {
+            height: 100px;
+            width: 100px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+            transition: transform 0.3s ease;
+        }
+        
+        .school-logo:hover {
+            transform: rotate(-5deg) scale(1.05);
+        }
+        
+        .school-name {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 1rem;
+        }
+        
+        .school-name h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            background: linear-gradient(90deg, var(--primary), var(--dark));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .school-name p {
+            color: var(--dark);
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .school-name p::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+        
+        .right-image {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+            transition: transform 0.3s ease;
+        }
+        
+        .right-image:hover {
+            transform: rotate(5deg) scale(1.05);
+        }
+        
+        /* Floating decorative elements */
+        .floating-icon {
+            position: absolute;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .floating-icon:nth-child(1) {
+            top: 20%;
+            left: 5%;
+            font-size: 3rem;
+            color: var(--primary);
+        }
+        
+        .floating-icon:nth-child(2) {
+            bottom: 10%;
+            right: 10%;
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .top-banner {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1.5rem 3rem;
+                min-height: 180px;
+            }
+            
+            .logo-container {
+                margin-bottom: 0;
+            }
+            
+            .school-logo {
+                height: 120px;
+                width: 120px;
+            }
+            
+            .right-image {
+                height: 100px;
+            }
+            
+            .school-name {
+                margin-bottom: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .top-banner {
+                padding: 1.5rem 1rem;
+            }
+            
+            .school-logo {
+                height: 80px;
+                width: 80px;
+            }
+            
+            .right-image {
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Modern Top Banner -->
+    <div class="top-banner">
+        <!-- Decorative floating icons -->
+        <div class="floating-icon">🎓</div>
+        <div class="floating-icon">📚</div>
+        
+        <div class="logo-container">
+            <!-- Replace with your actual logo -->
+            <img src="https://via.placeholder.com/100x100.png?text=EM+Logo" alt="Ecole Malaika Logo" class="school-logo">
+        </div>
+        
+        <div class="school-name">
+            <h1>ECOLE MALAIKA SAINT DOMINIC SAVIO</h1>
+            <p>Empowering Minds, Nourishing Souls for a Brighter Future</p>
+        </div>
+        
+        <!-- Replace with your actual Dominic Savio image -->
+        <img src="https://via.placeholder.com/80x80.png?text=St+Dominic" alt="Saint Dominic Savio" class="right-image">
+    </div>
+    
+    <!-- Rest of your page content would go here -->
+    <div style="height: 2000px;"></div>
+</body>
+</html>
