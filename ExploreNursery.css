@@ -20,326 +20,345 @@ body {
     background-color: white;
 }
 
-/* Premium Header Container */
-.header-container {
-    width: 100%;
-    background: var(--navy);
+.artistic-banner {
     position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* Elegant Top Banner */
-.top-banner {
+    background: linear-gradient(145deg, #ffffff 50%, #f3f7fc);
+    padding: 4rem 2rem 6rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .banner-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 2rem 4rem;
-    position: relative;
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-.top-banner::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    opacity: 0.3;
-}
-
-.logo-container {
-    flex: 0 0 180px;
+    justify-content: space-between;
+    flex-wrap: wrap;
     position: relative;
     z-index: 2;
-}
-
-.school-logo {
-    width: 160px;
-    height: 160px;
+    gap: 2.5rem;
+  }
+  
+  /* School Logo */
+  .left-logo .logo-img {
+    height: 150px;
     object-fit: contain;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+  }
+  
+  /* Student Circular Image */
+  .right-photo .student-circle {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 3px solid var(--gold);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.4, 1);
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(5px);
-}
-
-.school-logo:hover {
-    transform: scale(1.05) rotate(-2deg);
-}
-
-.school-info {
+    border: 6px solid #D4AF37;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+  }
+  
+  /* Center Text */
+  .center-text {
     flex: 1;
     text-align: center;
-    padding: 0 3rem;
-    position: relative;
-    z-index: 2;
-}
-
-.school-name {
+    padding: 0 1rem;
+  }
+  
+  .center-text h1 {
     font-family: 'Playfair Display', serif;
-    font-weight: 900;
     font-size: 2.8rem;
-    color: var(--cream);
-    line-height: 1.1;
-    margin-bottom: 0.8rem;
-    letter-spacing: 0.5px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-.school-subtitle {
-    display: block;
-    font-size: 1.8rem;
-    color: var(--gold);
-    font-weight: 700;
-}
-
-.motto {
-    color: rgba(255,255,255,0.9);
+    font-weight: 800;
+    color: #1a4b88;
+    margin-bottom: 0.75rem;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .center-text p {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     font-style: italic;
-    position: relative;
-    display: inline-block;
-    padding: 0 2rem;
-}
-
-.motto::before, .motto::after {
-    content: "✧";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--gold);
-    opacity: 0.7;
-}
-
-.motto::before { left: 0; }
-.motto::after { right: 0; }
-
-.dominique-container {
-    flex: 0 0 180px;
-    position: relative;
-    z-index: 2;
-}
-
-.dominique-image {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid var(--gold);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.4, 1);
-    filter: sepia(20%) brightness(110%);
-}
-
-.dominique-image:hover {
-    transform: scale(1.05) rotate(2deg);
-}
-
-/* Luxury Navigation Bar */
-.nav-container {
-    background: rgba(10, 31, 58, 0.95);
-    backdrop-filter: blur(8px);
-    border-top: 1px solid rgba(212, 175, 55, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    max-width: 1400px;
+    color: #555;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.nav-item {
-    position: relative;
-}
-
-.nav-item::after {
-    content: '';
+    opacity: 0.95;
+  }
+  
+  /* Artistic Background Layer */
+  .decor-layer {
     position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: transparent;
-}
+    inset: 0;
+    z-index: 1;
+    background: radial-gradient(ellipse at top left, rgba(26, 75, 136, 0.3), transparent 70%),
+                radial-gradient(ellipse at bottom right, rgba(212, 175, 55, 0.3), transparent 70%),
+                linear-gradient(to bottom right, transparent, rgba(255, 255, 255, 0.3));
+    mask-image: radial-gradient(circle at 50% 50%, white 60%, transparent 100%);
+  }
+  
+  /* Artistic Lines using Pseudo Elements */
+  .artistic-banner::before,
+  .artistic-banner::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  .artistic-banner::before {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(26, 75, 136, 0.2), transparent);
+    bottom: -200px;
+    left: -150px;
+    transform: rotate(20deg);
+  }
+  
+  .artistic-banner::after {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.2), transparent);
+    top: -150px;
+    right: -100px;
+    transform: rotate(-15deg);
+  }
 
-.nav-item > a {
-    color: var(--cream);
-    text-decoration: none;
-    padding: 1.5rem 2rem;
+
+  /* Core styles from earlier remain... */
+
+@media (max-width: 1024px) {
+    .center-text h1 {
+      font-size: 2.2rem;
+    }
+  
+    .center-text p {
+      font-size: 1.05rem;
+      padding: 0 1rem;
+    }
+  
+    .left-logo .logo-img,
+    .right-photo .student-circle {
+      height: 120px;
+      width: 120px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .banner-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.8rem;
+      text-align: center;
+    }
+  
+    .left-logo,
+    .right-photo {
+      order: 1;
+    }
+  
+    .center-text {
+      order: 2;
+      padding: 0 1rem;
+    }
+  
+    .center-text h1 {
+      font-size: 1.8rem;
+    }
+  
+    .center-text p {
+      font-size: 1rem;
+    }
+  
+    .left-logo .logo-img,
+    .right-photo .student-circle {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .center-text h1 {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+  
+    .center-text p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  
+    .artistic-banner {
+      padding: 2.5rem 1rem 4rem;
+      border-radius: 0 0 60px 60px;
+    }
+  
+    .left-logo .logo-img,
+    .right-photo .student-circle {
+      height: 85px;
+      width: 85px;
+    }
+  }
+  
+    
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.nav-container {
+    background-color: #3e3b58;
+    color: white;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-item > a {
     display: flex;
     align-items: center;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    position: relative;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-}
+    gap: 0.4rem;
+    padding: 1rem 1.2rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: background 0.3s ease;
+  }
 
-.nav-item.has-dropdown > a::after {
-    content: "\f078";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+  .nav-item > a:hover {
+    background-color: #457b9d;
+    border-radius: 4px;
+  }
+
+  .nav-item.has-dropdown > a .dropdown-icon {
     font-size: 0.7rem;
-    margin-left: 8px;
     transition: transform 0.3s ease;
-}
+  }
 
-.nav-item.has-dropdown:hover > a::after {
+  .nav-item.has-dropdown.active > a .dropdown-icon {
     transform: rotate(180deg);
-}
+  }
 
-.nav-item > a:hover {
-    color: var(--gold);
-}
-
-/* Premium Dropdown Menus */
-.dropdown {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(10, 31, 58, 0.98);
-    width: 240px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-    border-radius: 0 0 8px 8px;
-    border-top: 2px solid var(--gold);
-    padding: 1rem 0;
-    z-index: 1001;
-    pointer-events: none;
-}
-
-.nav-item:hover .dropdown {
-    opacity: 1;
-    visibility: visible;
-    top: calc(100% + 5px);
-    pointer-events: auto;
-}
-
-.mega-dropdown {
-    width: 800px;
-    display: flex;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1.5rem;
-}
-
-.mega-column {
-    flex: 1;
-    padding: 0 1rem;
-}
-
-.mega-column h4 {
-    color: var(--gold);
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-}
-
-.dropdown a {
-    color: rgba(255,255,255,0.9);
-    padding: 0.8rem 2rem;
-    display: block;
-    transition: all 0.2s ease;
-    position: relative;
-    font-size: 0.95rem;
-}
-
-.dropdown a:hover {
-    background: rgba(212, 175, 55, 0.1);
-    color: var(--gold);
-    padding-left: 2.5rem;
-}
-
-.dropdown a i {
-    margin-right: 10px;
-    width: 20px;
-}
-
-/* Mobile Menu */
-.mobile-menu-btn {
+  .has-dropdown .dropdown {
     display: none;
-    background: var(--navy);
-    color: var(--gold);
-    border: none;
-    padding: 1.5rem;
-    font-size: 1.2rem;
+    position: absolute;
+    background-color: #1d3557;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 0.5rem 0;
+    z-index: 999;
+    flex-direction: column;
+  }
+
+  .has-dropdown:hover .dropdown {
+    display: flex;
+  }
+
+  .dropdown a {
+    padding: 0.75rem 1.2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  .dropdown a:hover {
+    background-color: #457b9d;
+  }
+
+  .mega-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #1d3557;
+    top: 100%;
+    left: 0;
     width: 100%;
-    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .has-dropdown:hover .mega-dropdown {
+    display: flex;
+  }
+
+  .mega-column {
+    flex: 1 1 200px;
+    margin: 1rem;
+  }
+
+  .mega-column h4 {
+    color: #a8dadc;
+    margin-bottom: 1rem;
+  }
+
+  .mega-column a {
+    display: block;
+    padding: 0.5rem 0;
+    color: white;
+    text-decoration: none;
+  }
+
+  .mega-column a:hover {
+    color: #f1faee;
+    text-decoration: underline;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem;
     cursor: pointer;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-}
+  }
 
-@media (max-width: 1200px) {
-    .top-banner { padding: 2rem; }
-    .school-name { font-size: 2.4rem; }
-    .school-subtitle { font-size: 1.5rem; }
-    .mega-dropdown { width: 700px; }
-}
-
-@media (max-width: 992px) {
-    .top-banner {
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem 1.5rem;
+  @media (max-width: 991px) {
+    .mobile-menu-btn {
+      display: block;
     }
-    
-    .logo-container, .dominique-container { margin-bottom: 1.5rem; }
-    .school-info { padding: 0; margin-bottom: 1.5rem; }
-    
+
     .nav-menu {
-        flex-direction: column;
-        display: none;
-        padding: 1rem;
+      flex-direction: column;
+      display: none;
+      background-color: #1d3557;
     }
 
-    .nav-menu.active { display: flex; }
+    .nav-menu.show {
+      display: flex;
+    }
+
+    .has-dropdown .dropdown,
+    .has-dropdown:hover .dropdown,
+    .has-dropdown .mega-dropdown,
+    .has-dropdown:hover .mega-dropdown {
+      position: static;
+      display: none;
+    }
+
+    .has-dropdown.active .dropdown,
+    .has-dropdown.active .mega-dropdown {
+      display: flex;
+      flex-direction: column;
+    }
 
     .dropdown, .mega-dropdown {
-        position: static;
-        width: 100%;
-        transform: none;
-        display: none;
-        box-shadow: none;
-        background: rgba(0,0,0,0.1);
-        opacity: 1;
-        visibility: visible;
+      padding-left: 1.5rem;
     }
-
-    .mega-dropdown { flex-direction: column; }
-
-    .nav-item.has-dropdown > a::after {
-        content: "\f078";
-        position: absolute;
-        right: 1.5rem;
-    }
-
-    .nav-item.active .dropdown { display: block; }
-    .mobile-menu-btn { display: block; }
-}
-
-@media (max-width: 768px) {
-    .school-name { font-size: 2rem; }
-    .school-subtitle { font-size: 1.3rem; }
-    .motto { font-size: 1rem; }
-    .school-logo, .dominique-image { width: 120px; height: 120px; }
-    .mega-dropdown { width: 100%; }
-}
-
-
+  }
 
 
 
