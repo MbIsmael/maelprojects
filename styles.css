@@ -20,6 +20,76 @@ body {
     background-color: white;
 }
 
+
+
+
+
+
+
+
+
+.top-bar {
+  background-color: #3e3b58;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* No wrapping */
+  font-family: sans-serif;
+  font-size: 14px;
+  gap: 16px;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 16px;
+}
+
+.icon-item i {
+  background-color: white;
+  color: #3e3b58;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Smaller Screens */
+@media (max-width: 768px) {
+  .contact-text {
+    display: none; /* Hide number and email text */
+  }
+  .top-bar {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .icon-group {
+    gap: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 .artistic-banner {
     position: relative;
     background: linear-gradient(145deg, #ffffff 50%, #f3f7fc);
