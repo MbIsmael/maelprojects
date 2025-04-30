@@ -27,7 +27,6 @@ body {
 
 
 
-
 .top-bar {
   background-color: #3e3b58;
   padding: 8px 16px;
@@ -55,7 +54,7 @@ body {
 }
 
 .icon-item i {
-  background-color: white;
+  background-color: #D6C7AE;
   color: #3e3b58;
   padding: 10px;
   border-radius: 4px;
@@ -80,12 +79,6 @@ body {
     gap: 16px;
   }
 }
-
-
-
-
-
-
 
 
 
@@ -272,7 +265,7 @@ body {
 
 .nav-container {
     background-color: #3e3b58;
-    color: white;
+    color: #D6C7AE;
     position: relative;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -290,7 +283,9 @@ body {
   .nav-item {
     position: relative;
   }
-
+  .nav-menu a {
+    text-transform: uppercase;
+  }
   .nav-item > a {
     display: flex;
     align-items: center;
