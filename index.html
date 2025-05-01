@@ -162,17 +162,26 @@
 
 
 
-
-<!-- Clean Hero Video Background -->
-<section class="hero-video">
-    <video autoplay muted loop playsinline class="background-video">
-      <source src="Mustard Seed Preschool - Promo.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
-  
-
-
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="images/image1.JPG" alt="Élèves de l'école primaire jouant dans la cour" />
+    </div>
+    <div class="mySlides fade">
+      <img src="images/image2.jpg" alt="Salle de classe de la maternelle bien équipée" />
+    </div>
+    <div class="mySlides fade">
+      <img src="images/image6.JPG" alt="Enseignante expliquant une leçon aux enfants" />
+    </div>
+    <div class="mySlides fade">
+      <img src="images/image5.JPG" alt="Activités créatives pour les élèves de maternelle" />
+    </div>
+    <div class="mySlides fade">
+      <img src="images/image3.JPG" alt="Jardin de l’école Malaïka St Dominique Savio" />
+    </div>
+    <div class="mySlides fade">
+      <img src="images/image4.jpg" alt="Élèves en uniforme participant à une cérémonie" />
+    </div>
+  </div>
 
 
 
@@ -433,6 +442,24 @@
         });
       });
     });
+
+
+
+
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("mySlides");
+  
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].classList.add("active");
+      setTimeout(showSlides, 5000); // 5 secondes
+    }
+  
+    showSlides();
     </script>
     
     
